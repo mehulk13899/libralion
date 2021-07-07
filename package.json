@@ -1,0 +1,23 @@
+{
+  "name": "sglitedemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@leafac/sqlite": "^1.4.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.9",
+    "sqlite3": "^5.0.2"
+  },
+  "engines": {
+    "node": "14.17.0"
+  }
+}
