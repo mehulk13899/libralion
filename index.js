@@ -86,6 +86,7 @@ app.get("/create", (req, res) => {
 // POST /create
 app.post("/create", (req, res) => {
   const sql = "INSERT INTO Books (Title, Author, Comments) VALUES (?, ?, ?)";
+  console.log(req.body)
   const book = [req.body.title, req.body.author, req.body.comments];
   db.run(sql, book, err => {
     if (err) {
@@ -152,3 +153,5 @@ app.post("/delete/:id", (req, res) => {
     }
   });
 });
+
+//https://libralion.herokuapp.com/book
