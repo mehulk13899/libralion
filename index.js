@@ -4,8 +4,9 @@ const sqlite3 = require("sqlite3").verbose();
 
 // Creating the Express server
 const app = express();
-const port=3000||process.env.PORT;
+const port=process.env.PORT||3000;
 console.log(process.env.PORT)
+console.log(port)
 // Server configuration
 app.use(express.urlencoded({ extended: false }));
 
@@ -46,7 +47,7 @@ db.run(sql_create, err => {
 
 // Starting the server
 app.listen(port, () => {
-  console.log(`Server started (http://localhost:${port}/) !`);
+  console.log(`Server started (http://localhost:${port}/)`);
 });
 
 // GET /
