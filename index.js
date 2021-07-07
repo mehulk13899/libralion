@@ -4,7 +4,8 @@ const sqlite3 = require("sqlite3").verbose();
 
 // Creating the Express server
 const app = express();
-const port=3000|process.env.PORT;
+const port=3000||process.env.PORT;
+console.log(process.env.PORT)
 // Server configuration
 app.use(express.urlencoded({ extended: false }));
 
@@ -86,7 +87,6 @@ app.get("/create", (req, res) => {
 // POST /create
 app.post("/create", (req, res) => {
   const sql = "INSERT INTO Books (Title, Author, Comments) VALUES (?, ?, ?)";
-  console.log(req.body)
   const book = [req.body.title, req.body.author, req.body.comments];
   db.run(sql, book, err => {
     if (err) {
